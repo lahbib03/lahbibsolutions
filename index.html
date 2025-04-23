@@ -42,6 +42,19 @@
       padding: 10px;
       margin-top: 40px;
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -59,35 +72,38 @@
   <section id="about">
     <h2>Über uns</h2>
     <p>
-        Lahbib Solutions ist ein innovatives IT-Unternehmen mit Sitz in Berlin. Wir spezialisieren uns auf die Entwicklung moderner Webanwendungen, die Implementierung von Datenbanksystemen sowie auf individuelle IT-Beratung. Unser Fokus liegt darauf, Unternehmen mit maßgeschneiderten digitalen Lösungen zu unterstützen – professionell, transparent und auf Augenhöhe.
-        
-        ## Leistungen
-        
-        - Entwicklung von Webanwendungen
-        - Aufbau und Pflege von Datenbanksystemen
-        - IT-Beratung und Projektbegleitung
-        - Hosting & Deployment
-        
-        ## Kontakt
-        
-        📍 Berlin, Deutschland  
-        📧 kontakt
-         kontakt@lahbibsolutions.com 
-        🌐 <www class="lahbibsolutions com"></www></p>
+      Lahbib Solutions ist ein innovatives IT-Unternehmen mit Sitz in Berlin. Wir spezialisieren uns auf die Entwicklung moderner Webanwendungen, die Implementierung von Datenbanksystemen sowie auf individuelle IT-Beratung. Unser Fokus liegt darauf, Unternehmen mit maßgeschneiderten digitalen Lösungen zu unterstützen – professionell, transparent und auf Augenhöhe.
+    </p>
   </section>
 
   <section id="services">
     <h2>Leistungen</h2>
-    <p>[Hier kommen deine Services rein – zum Beispiel Webentwicklung, Beratung, Datenbanklösungen etc.]</p>
+    <ul>
+      <li>Entwicklung von Webanwendungen</li>
+      <li>Aufbau und Pflege von Datenbanksystemen</li>
+      <li>IT-Beratung und Projektbegleitung</li>
+      <li>Hosting & Deployment</li>
+    </ul>
   </section>
 
   <section id="contact">
     <h2>Kontakt</h2>
-    <p>[Hier kommt dein Kontaktformular oder deine Kontaktdaten hin]</p>
+    <form action="mailto:kontakt@lahbibsolutions.com" method="POST" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Absenden</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Lahbib Solutions</p>
+    <p>&copy; 2025 Lahbib Solutions | Berlin, 12683</p>
   </footer>
 </body>
 </html>
