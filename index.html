@@ -1,52 +1,100 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Unternehmen</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lahbib Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0a1f44;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background-color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #0a1f44;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #0a1f44;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Willkommen bei lahbibsolutions </h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Dienstleistungen</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Lahbib Solutions</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">Über uns</a>
+      <a href="#services">Leistungen</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
 
-    <section id="home">
-        <h2>Unsere Vision</h2>
-        <p>Wir bieten innovative IT-Lösungen für moderne Unternehmen.</p>
-    </section>
+  <section class="hero">
+    <h2>Digitale Lösungen mit Vertrauen</h2>
+    <p>Wir bieten moderne IT-Services, Webentwicklung und technologische Beratung.</p>
+    <a href="#contact" class="btn">Jetzt starten</a>
+  </section>
 
-    <section id="services">
-        <h2>Unsere Dienstleistungen</h2>
-        <ul>
-            <li>Webentwicklung</li>
-            <li>App-Entwicklung</li>
-            <li>IT-Beratung</li>
-        </ul>
-    </section>
-
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Wir sind ein engagiertes Team aus Entwicklern und IT-Experten.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Email: kontakt@deinedomain.com</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 [Dein Unternehmen]. Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <script src="scripts/script.js"></script>
+  <footer>
+    &copy; 2025 Lahbib Solutions – Alle Rechte vorbehalten
+  </footer>
 </body>
 </html>
