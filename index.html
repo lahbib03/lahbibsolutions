@@ -87,6 +87,96 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .angebot-section {
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      padding: 50px 30px;
+      border-radius: 20px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUpFade 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+    
+    .angebot-section h2 {
+      font-size: 2.2em;
+      color: #0d47a1;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease forwards;
+    }
+    
+    .angebot-section p, .angebot-section ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #333;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    
+    .angebot-section ul {
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+    
+    .angebot-section li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+      animation: fadeInLeft 0.5s ease forwards;
+    }
+    
+    .angebot-section li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0d47a1;
+    }
+    
+    /* Animationen */
+    @keyframes slideUpFade {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
   </style>
 </head>
 <body>
@@ -98,6 +188,7 @@
   <nav>
     <a onclick="showSection('home')">Startseite</a>
     <a onclick="showSection('about')">Über uns</a>
+    <a onclick="showSection('Angebot')">Über uns</a>
     <a onclick="showSection('contact')">Kontakt</a>
   </nav>
 
@@ -110,7 +201,20 @@
     <h2>Über uns</h2>
     <p>Wir sind ein engagiertes Team von Entwicklern und Technikliebhabern aus Berlin. Unsere Mission ist es, innovative und benutzerfreundliche IT-Lösungen bereitzustellen.</p>
   </div>
-
+  <div id="Angebot" class="angebot-section">
+    <h2>Unsere Angebote</h2>
+    <p>
+      Bei <strong>Lahbib Solutions</strong> bieten wir innovative IT-Dienstleistungen auf höchstem Niveau:
+    </p>
+    <ul>
+      <li><strong>Webentwicklung:</strong> Maßgeschneiderte Webseiten & Webapps mit modernster Technik.</li>
+      <li><strong>IT-Beratung:</strong> Wir analysieren, optimieren und digitalisieren deine Geschäftsprozesse.</li>
+      <li><strong>Automatisierung:</strong> Von Smart-Home bis hin zu Industrie 4.0 – wir automatisieren, was geht.</li>
+      <li><strong>Individuelle Softwarelösungen:</strong> Wir entwickeln Tools, die wirklich zu dir passen.</li>
+      <li><strong>Support & Wartung:</strong> Zuverlässig. Schnell. Persönlich.</li>
+    </ul>
+  </div>
+  
   <div id="contact" class="content">
     <h2>Kontakt</h2>
     <p>Du erreichst uns unter:</p>
@@ -122,7 +226,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Lahbib Solutions | Berlin, 12683</p>
+    <p>&copy; 2025 Lahbib Solutions |📍 Berlin, 12683   📞+49 17671671938 📩  kontakt@lahbibsolutions.com </p>
   </footer>
 
   <script>
