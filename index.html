@@ -274,7 +274,8 @@
     <h2>Über uns</h2>
     <p>Wir sind ein engagiertes Team von Entwicklern und Technikliebhabern aus Berlin. Unsere Mission ist es, innovative und benutzerfreundliche IT-Lösungen bereitzustellen.</p>
   </div>
-  <div id="Angebot" class="angebot-section">
+  <div id="Angebot" class="content angebot-section">
+
     <h2>Unsere Angebote</h2>
     <p>
       Bei <strong>Lahbib Solutions</strong> bieten wir innovative IT-Dienstleistungen auf höchstem Niveau:
@@ -317,27 +318,29 @@
       });
       document.getElementById(id).classList.add('active');
     }
-  </script>
-  
-  function sendMessage(event) {
-    event.preventDefault();
-    const form = event.target;
-    const status = document.getElementById("form-status");
-  
-    // Hier könntest du später eine echte API einbauen
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-  
-    if (name && email && message) {
-      status.textContent = "✅ Nachricht erfolgreich gesendet!";
-      status.style.color = "green";
-      form.reset();
-    } else {
-      status.textContent = "❌ Bitte fülle alle Felder aus.";
-      status.style.color = "red";
+    function sendMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const status = document.getElementById("form-status");
+    
+      // Hier könntest du später eine echte API einbauen
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+    
+      if (name && email && message) {
+        status.textContent = "✅ Nachricht erfolgreich gesendet!";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.textContent = "❌ Bitte fülle alle Felder aus.";
+        status.style.color = "red";
+      }
     }
-  }
+    
+  </script>
+
+
   
 </body>
 </html>
