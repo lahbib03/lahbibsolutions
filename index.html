@@ -20,6 +20,41 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+    
+    .logo {
+      width: 60px;
+      height: auto;
+      animation: slideIn 1s ease-out;
+    }
+    
+    .header-text h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    
+    .header-text p {
+      margin: 0;
+      font-size: 16px;
+    }
+    
+    /* Animation für Logo */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
 
     header h1 {
       margin: 0;
@@ -181,10 +216,14 @@
 </head>
 <body>
   <header>
-    <h1>Lahbib Solutions</h1>
-    <p>Technologie mit Vertrauen</p>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Lahbib Solutions Logo" class="logo">
+      <div class="header-text">
+        <h1>Lahbib Solutions</h1>
+        <p>Technologie mit Vertrauen</p>
+      </div>
+    </div>
   </header>
-
   <nav>
     <a onclick="showSection('home')">Startseite</a>
     <a onclick="showSection('about')">Über uns</a>
