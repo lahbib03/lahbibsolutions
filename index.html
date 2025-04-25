@@ -1,59 +1,91 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lahbib Solutions</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
       color: #333;
     }
+
     header {
       background-color: #0d47a1;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.2em;
+      animation: fadeInUp 1s ease;
+    }
+
     nav {
       background-color: #1565c0;
-      padding: 10px;
       text-align: center;
+      padding: 15px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+      cursor: pointer;
     }
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    nav a:hover {
+      color: #ffeb3b;
     }
+
+    .content {
+      padding: 40px 20px;
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .active {
+      display: block;
+    }
+
     footer {
       background-color: #0d47a1;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 40px;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      margin-top: 50px;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    form button {
-      background-color: #0d47a1;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -64,46 +96,42 @@
   </header>
 
   <nav>
-    <a href="#about">Über uns</a>
-    <a href="#services">Leistungen</a>
-    <a href="#contact">Kontakt</a>
+    <a onclick="showSection('home')">Startseite</a>
+    <a onclick="showSection('about')">Über uns</a>
+    <a onclick="showSection('contact')">Kontakt</a>
   </nav>
 
-  <section id="about">
+  <div id="home" class="content active">
+    <h2>Willkommen bei Lahbib Solutions</h2>
+    <p>Wir bringen Technologie und Vertrauen zusammen. Entdecke unsere Dienstleistungen und werde Teil der digitalen Zukunft.</p>
+  </div>
+
+  <div id="about" class="content">
     <h2>Über uns</h2>
-    <p>
-      Lahbib Solutions ist ein innovatives IT-Unternehmen mit Sitz in Berlin. Wir spezialisieren uns auf die Entwicklung moderner Webanwendungen, die Implementierung von Datenbanksystemen sowie auf individuelle IT-Beratung. Unser Fokus liegt darauf, Unternehmen mit maßgeschneiderten digitalen Lösungen zu unterstützen – professionell, transparent und auf Augenhöhe.
-    </p>
-  </section>
+    <p>Wir sind ein engagiertes Team von Entwicklern und Technikliebhabern aus Berlin. Unsere Mission ist es, innovative und benutzerfreundliche IT-Lösungen bereitzustellen.</p>
+  </div>
 
-  <section id="services">
-    <h2>Leistungen</h2>
-    <ul>
-      <li>Entwicklung von Webanwendungen</li>
-      <li>Aufbau und Pflege von Datenbanksystemen</li>
-      <li>IT-Beratung und Projektbegleitung</li>
-      <li>Hosting & Deployment</li>
-    </ul>
-  </section>
-
-  <section id="contact">
+  <div id="contact" class="content">
     <h2>Kontakt</h2>
-    <form action="mailto:kontakt@lahbibsolutions.com" method="POST" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      
-      <button type="submit">Absenden</button>
-    </form>
-  </section>
+    <p>Du erreichst uns unter:</p>
+    <ul>
+      <li>Email: kontakt@lahbib-solutions.de</li>
+      <li>Telefon: +49 123 456789</li>
+      <li>Adresse: Berlin, 12683</li>
+    </ul>
+  </div>
 
   <footer>
     <p>&copy; 2025 Lahbib Solutions | Berlin, 12683</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content').forEach(el => {
+        el.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
