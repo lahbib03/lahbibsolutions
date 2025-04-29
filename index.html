@@ -154,11 +154,20 @@
   <a onclick="showSection('start')">Startseite</a>
   <a onclick="showSection('angebot')">Angebot</a>
   <a onclick="showSection('kontakt')">Kontakt</a>
+  <a onclick="showSection('Über Uns')">ueberUns</a>
 </nav>
 
-<div id="start" class="section active start-section">
-  <h2>Willkommen bei Lahbib Solutions</h2>
-  <p>Wir bieten moderne und zuverlässige Weblösungen, die auf Ihre individuellen Bedürfnisse zugeschnitten sind. Ob Sie eine Website, eine Webanwendung oder zuverlässiges Hosting benötigen – bei uns sind Sie richtig!</p>
+<div id="start" class="section active start-section" style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 900px; margin: 40px auto; animation: fadeIn 1.2s ease forwards;">
+  <h2 style="font-size: 2.8em; color: #0d47a1; margin-bottom: 20px; font-family: 'Georgia', serif;">Willkommen bei <span style="color: #1976d2;">Lahbib Solutions</span></h2>
+  <p style="font-size: 1.3em; line-height: 1.8; color: #444; margin-bottom: 30px;">
+    Ihre Vision ist unser Projekt – wir gestalten digitale Lösungen mit Leidenschaft und Präzision.
+  </p>
+  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
+    Egal ob Sie eine <strong>maßgeschneiderte Website</strong>, eine <strong>skalierbare Webanwendung</strong> oder ein <strong>sicheres Hosting</strong> benötigen – bei uns bekommen Sie alles aus einer Hand. Mit modernsten Technologien und einem kreativen Team setzen wir Ihre Ideen um und begleiten Sie von der Planung bis zur Umsetzung.
+  </p>
+  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
+    Vertrauen Sie auf <strong>Kompetenz, Kreativität und Kundenorientierung</strong>. Starten Sie mit uns in die digitale Zukunft!
+  </p>
 </div>
 
 <div id="angebot" class="section angebot-section">
@@ -171,7 +180,13 @@
     <li>🔒 Sicherheit & Wartung – regelmäßige Updates und Schutz</li>
   </ul>
 </div>
-
+<div id="'Über Uns" class="section active start-section">
+  <h2>Willkommen bei Lahbib Solutions</h2>
+  <p>  Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
+    Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen –
+    von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.</p>
+  
+</div>
 <div id="kontakt" class="section kontakt-section">
   <h2>Kontaktformular</h2>
   <form onsubmit="event.preventDefault(); alert('Vielen Dank! Wir melden uns bald.'); this.reset();">
