@@ -12,99 +12,17 @@
       background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
       color: #333;
     }
-    .about-section, .services-section {
-      background: white;
-      border-radius: 20px;
-      margin: 40px auto;
-      padding: 40px 30px;
-      max-width: 900px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      animation: slideUpFade 1s ease-out forwards;
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    
-    .about-section h2, .services-section h2 {
-      font-size: 2.2em;
-      color: #0d47a1;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease;
-    }
-    
-    .about-section p, .services-section ul {
-      font-size: 1.1em;
-      line-height: 1.7;
-      color: #333;
-      animation: fadeIn 1.2s ease;
-    }
-    
-    .services-section ul {
-      padding-left: 20px;
-    }
-    
-    .services-section li {
-      margin-bottom: 15px;
-      position: relative;
-      padding-left: 25px;
-      animation: fadeInLeft 0.6s ease forwards;
-    }
-    
-    .services-section li::before {
-      content: "💡";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #0d47a1;
-      font-size: 1.1em;
-    }
-    
 
     header {
       background-color: #0d47a1;
       color: white;
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .header-container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-content: flex-start;
-    }
-    
-    .logo {
-      width: 90px;
-      height: auto;
-      animation: slideIn 1s ease-out;
-    }
-    
-    .header-text h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    
-    .header-text p {
-      margin: 0;
-      font-size: 16px;
-    }
-    
-    /* Animation für Logo */
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
       animation: fadeInDown 1s ease;
     }
 
@@ -115,26 +33,29 @@
 
     nav {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      background: #1976d2;
+      padding: 10px;
+      gap: 30px;
     }
-    
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
-      transition: color 0.3s;
       cursor: pointer;
     }
-    
+
     nav a:hover {
       color: #ffeb3b;
     }
-    
 
-    .content {
-      padding: 40px 20px;
+    .section {
       display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
       animation: fadeIn 0.5s ease forwards;
     }
 
@@ -142,17 +63,70 @@
       display: block;
     }
 
+    .start-section {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 50px;
+      text-align: center;
+    }
+
+    .start-section h2 {
+      font-size: 2.2em;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    .start-section p {
+      font-size: 1.2em;
+      line-height: 1.7;
+    }
+
+    .angebot-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .angebot-section li::before {
+      content: "💡";
+      margin-right: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
     footer {
       background-color: #0d47a1;
       color: white;
       text-align: center;
       padding: 15px;
-      position: relative;
-      bottom: 0;
       margin-top: 50px;
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -167,247 +141,60 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .angebot-section {
-      background: linear-gradient(135deg, #e3f2fd, #ffffff);
-      padding: 50px 30px;
-      border-radius: 20px;
-      margin: 40px auto;
-      max-width: 900px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(50px);
-      animation: slideUpFade 1s ease-out forwards;
-      animation-delay: 0.3s;
-    }
-    
-    .angebot-section h2 {
-      font-size: 2.2em;
-      color: #0d47a1;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease forwards;
-    }
-    
-    .angebot-section p, .angebot-section ul {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #333;
-      animation: fadeIn 1.2s ease forwards;
-    }
-    
-    .angebot-section ul {
-      padding-left: 20px;
-      margin-top: 20px;
-    }
-    
-    .angebot-section li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 25px;
-      animation: fadeInLeft 0.5s ease forwards;
-    }
-    
-    .angebot-section li::before {
-      content: "✔️";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #0d47a1;
-    }
-    
-    /* Animationen */
-    @keyframes slideUpFade {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    .contact-form {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 600px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    
-    .contact-form button {
-      background-color: #0d47a1;
-      color: white;
-      border: none;
-      padding: 12px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .contact-form button:hover {
-      background-color: #1565c0;
-    }
-    
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-container" style="justify-content: space-between;">
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="images/logo.png" alt="Lahbib Solutions Logo" class="logo">
-        <div class="header-text">
-          <h1>Lahbib Solutions</h1>
-          <p>Technologie mit Vertrauen</p>
-        </div>
-      </div>
-      <nav>
-        <a onclick="showSection('home')">Startseite</a>
-        <a onclick="showSection('about')">Über uns</a>
-        <a onclick="showSection('Angebot')">Angebot</a>
-        <a onclick="showSection('contact')">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-  
 
-  <div id="home" class="content active">
-    <h2>Willkommen bei Lahbib Solutions</h2>
-    <p>Wir bringen Technologie und Vertrauen zusammen. Entdecke unsere Dienstleistungen und werde Teil der digitalen Zukunft.</p>
-  </div>
+<header>
+  <h1>Lahbib Solutions</h1>
+  <p>Innovative Weblösungen für Ihr digitales Wachstum</p>
+</header>
 
-  <div id="about" class="content">
-    <h2>Über uns</h2>
-    <p>Wir sind ein engagiertes Team von Entwicklern und Technikliebhabern aus Berlin. Unsere Mission ist es, innovative und benutzerfreundliche IT-Lösungen bereitzustellen.</p>
-  </div>
-  <div id="Angebot" class="content angebot-section">
+<nav>
+  <a onclick="showSection('start')">Startseite</a>
+  <a onclick="showSection('angebot')">Angebot</a>
+  <a onclick="showSection('kontakt')">Kontakt</a>
+</nav>
 
-    <h2>Unsere Angebote</h2>
-    <p>
-      Bei <strong>Lahbib Solutions</strong> bieten wir innovative IT-Dienstleistungen auf höchstem Niveau:
-    </p>
-    <ul>
-      <li><strong>Webentwicklung:</strong> Maßgeschneiderte Webseiten & Webapps mit modernster Technik.</li>
-      <li><strong>IT-Beratung:</strong> Wir analysieren, optimieren und digitalisieren deine Geschäftsprozesse.</li>
-      <li><strong>Automatisierung:</strong> Von Smart-Home bis hin zu Industrie 4.0 – wir automatisieren, was geht.</li>
-      <li><strong>Individuelle Softwarelösungen:</strong> Wir entwickeln Tools, die wirklich zu dir passen.</li>
-      <li><strong>Support & Wartung:</strong> Zuverlässig. Schnell. Persönlich.</li>
-    </ul>
-  </div>
-  <section class="about-section">
-    <h2>Über uns & Entwicklung</h2>
-    <p>
-      Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
-      Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen –
-      von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.
-    </p>
-    <p>
-      Unsere Stärke liegt in der Verbindung von Kreativität und Technik: Wir begleiten Projekte von der Idee bis zur Umsetzung – mit agilen Methoden, modernen Tools und viel Herzblut.
-    </p>
-  </section>
-  
-  <section class="services-section">
-    <h2>Unsere Services</h2>
-    <ul>
-      <li><strong>Webseitenentwicklung:</strong> Moderne, responsive Webseiten, optimiert für Mobilgeräte und SEO.</li>
-      <li><strong>Web-Apps & Plattformen:</strong> Individuelle Webanwendungen für Geschäftsprozesse, Buchungssysteme u.v.m.</li>
-      <li><strong>Design & Branding:</strong> UI/UX-Designs, Logos, Corporate Identity.</li>
-      <li><strong>Mehrsprachige Lösungen:</strong> Websites in Deutsch, Englisch, Französisch, Arabisch uvm.</li>
-      <li><strong>Skripte & Automatisierung:</strong> Individuelle Tools zur Effizienzsteigerung für dein Unternehmen.</li>
-    </ul>
-  </section>
-  <div id="contact" class="content">
-    <h2>Kontakt</h2>
-    
-  <form class="contact-form" onsubmit="sendMessage(event)">
-    <input type="text" name="name" placeholder="Dein Name" required />
-    <input type="email" name="email" placeholder="Deine E-Mail" required />
-    <textarea name="message" placeholder="Deine Nachricht..." rows="5" required></textarea>
+<div id="start" class="section active start-section">
+  <h2>Willkommen bei Lahbib Solutions</h2>
+  <p>Wir bieten moderne und zuverlässige Weblösungen, die auf Ihre individuellen Bedürfnisse zugeschnitten sind. Ob Sie eine Website, eine Webanwendung oder zuverlässiges Hosting benötigen – bei uns sind Sie richtig!</p>
+</div>
+
+<div id="angebot" class="section angebot-section">
+  <h2>Unsere Angebote</h2>
+  <ul>
+    <li>🌐 Webentwicklung – individuelle Websites mit modernem Design</li>
+    <li>🧠 Webanwendungen – intelligente Lösungen für Ihr Business</li>
+    <li>☁️ Hosting & Domains – sicher, schnell und skalierbar</li>
+    <li>📱 Responsive Design – optimale Darstellung auf allen Geräten</li>
+    <li>🔒 Sicherheit & Wartung – regelmäßige Updates und Schutz</li>
+  </ul>
+</div>
+
+<div id="kontakt" class="section kontakt-section">
+  <h2>Kontaktformular</h2>
+  <form onsubmit="event.preventDefault(); alert('Vielen Dank! Wir melden uns bald.'); this.reset();">
+    <input type="text" name="name" placeholder="Ihr Name" required />
+    <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required />
+    <textarea name="message" rows="5" placeholder="Ihre Nachricht..." required></textarea>
     <button type="submit">Absenden</button>
-    <p id="form-status" style="margin-top:10px;"></p>
   </form>
-    <p>Du erreichst uns unter:</p>
-    <ul>
-      <li>Email: kontakt@lahbib-solutions.de</li>
-      <li>Telefon: +49 123 456789</li>
-      <li>Adresse: Berlin, 12683</li>
-    </ul>
-  </div>
+</div>
 
+<footer>
+  &copy; 2025 Lahbib Solutions – Alle Rechte vorbehalten.
+</footer>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.content').forEach(el => {
-        el.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-    function sendMessage(event) {
-      event.preventDefault();
-      const form = event.target;
-      const status = document.getElementById("form-status");
-    
-      // Hier könntest du später eine echte API einbauen
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-    
-      if (name && email && message) {
-        status.textContent = "✅ Nachricht erfolgreich gesendet!";
-        status.style.color = "green";
-        form.reset();
-      } else {
-        status.textContent = "❌ Bitte fülle alle Felder aus.";
-        status.style.color = "red";
-      }
-    }
-    
-  <footer>
-    <p>&copy; 2025 Lahbib Solutions |📍 Berlin, 12683   📞+49 17671671938 📩  kontakt@lahbibsolutions.com </p>
-  </footer>
-  </script>
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
 
-
-  
 </body>
 </html>
