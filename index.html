@@ -12,6 +12,52 @@
       background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
       color: #333;
     }
+    .about-section, .services-section {
+      background: white;
+      border-radius: 20px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: slideUpFade 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    
+    .about-section h2, .services-section h2 {
+      font-size: 2.2em;
+      color: #0d47a1;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+    
+    .about-section p, .services-section ul {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #333;
+      animation: fadeIn 1.2s ease;
+    }
+    
+    .services-section ul {
+      padding-left: 20px;
+    }
+    
+    .services-section li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 25px;
+      animation: fadeInLeft 0.6s ease forwards;
+    }
+    
+    .services-section li::before {
+      content: "💡";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0d47a1;
+      font-size: 1.1em;
+    }
+    
 
     header {
       background-color: #0d47a1;
@@ -288,7 +334,28 @@
       <li><strong>Support & Wartung:</strong> Zuverlässig. Schnell. Persönlich.</li>
     </ul>
   </div>
+  <section class="about-section">
+    <h2>Über uns & Entwicklung</h2>
+    <p>
+      Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
+      Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen –
+      von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.
+    </p>
+    <p>
+      Unsere Stärke liegt in der Verbindung von Kreativität und Technik: Wir begleiten Projekte von der Idee bis zur Umsetzung – mit agilen Methoden, modernen Tools und viel Herzblut.
+    </p>
+  </section>
   
+  <section class="services-section">
+    <h2>Unsere Services</h2>
+    <ul>
+      <li><strong>Webseitenentwicklung:</strong> Moderne, responsive Webseiten, optimiert für Mobilgeräte und SEO.</li>
+      <li><strong>Web-Apps & Plattformen:</strong> Individuelle Webanwendungen für Geschäftsprozesse, Buchungssysteme u.v.m.</li>
+      <li><strong>Design & Branding:</strong> UI/UX-Designs, Logos, Corporate Identity.</li>
+      <li><strong>Mehrsprachige Lösungen:</strong> Websites in Deutsch, Englisch, Französisch, Arabisch uvm.</li>
+      <li><strong>Skripte & Automatisierung:</strong> Individuelle Tools zur Effizienzsteigerung für dein Unternehmen.</li>
+    </ul>
+  </section>
   <div id="contact" class="content">
     <h2>Kontakt</h2>
     
@@ -307,9 +374,6 @@
     </ul>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Lahbib Solutions |📍 Berlin, 12683   📞+49 17671671938 📩  kontakt@lahbibsolutions.com </p>
-  </footer>
 
   <script>
     function showSection(id) {
@@ -338,6 +402,9 @@
       }
     }
     
+  <footer>
+    <p>&copy; 2025 Lahbib Solutions |📍 Berlin, 12683   📞+49 17671671938 📩  kontakt@lahbibsolutions.com </p>
+  </footer>
   </script>
 
 
