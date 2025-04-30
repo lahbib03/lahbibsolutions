@@ -143,57 +143,65 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
- .card-wrapper {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 350px;
-  margin: 20px auto;
-}
+ .angebot-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
 
-.angebot-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 70px;
-}
+    .card-wrapper {
+      perspective: 1000px;
+      width: 300px;
+      height: 260px;
+    }
 
-.angebot-card {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+    .angebot-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
 
-.card-wrapper.flipped .angebot-card {
-  transform: rotateY(180deg);
-}
+    .card-wrapper.flipped .angebot-card {
+      transform: rotateY(180deg);
+    }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  padding: 60px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-color: white;
-}
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+    }
 
-.card-front h3, .card-back h3 {
-  margin-top: 0;
-  color: #0d47a1;
-}
+    .card-front {
+      background-size: cover;
+      background-position: center;
+      color: #0d47a1;
+    }
 
-.card-back {
-  background-color: #ffffff;
-  transform: rotateY(180deg);
-}
+    .card-back {
+      transform: rotateY(180deg);
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .card-front h3, .card-back h3 {
+      margin-bottom: 10px;
+    }
+
+
   </style>
 </head>
 <body>
@@ -226,83 +234,70 @@
   </p>
 </div>
 
-  <div id="angebot" class="section angebot-section">
-    <h2>Unsere Angebote</h2>
-    <div class="angebot-container">
+ <div id="angebot" class="section active">
+  <h2 style="text-align:center; color:#0d47a1;">Unsere Angebote</h2>
+  <div class="angebot-container">
 
-      <div class="card-wrapper" onclick="flipCard(this)">
-        <div class="angebot-card">
-          <div class="card-front" style="background-image: url('images/weben.png');">
-            <h3>🌐 Webentwicklung</h3>
-            <p>Individuelle Websites mit modernem Design</p>
-          </div>
-          <div class="card-back">
-            <h3>🌐 Webentwicklung</h3>
-            <p>Wir gestalten individuelle, moderne und benutzerfreundliche Websites – abgestimmt auf Ihre Bedürfnisse. Vom Onepager bis zum komplexen Webportal.</p>
-          </div>
+    <!-- Karte 1 -->
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="angebot-card">
+        <div class="card-front" style="background-image: url('images/weben.png');">
+          <h3>🌐 Webentwicklung</h3>
+          <p>Moderne, individuelle Websites</p>
+        </div>
+        <div class="card-back">
+          <h3>🌐 Webentwicklung</h3>
+          <p>Wir gestalten moderne, benutzerfreundliche Websites – vom Onepager bis zum komplexen Webportal.</p>
         </div>
       </div>
-
-      <div class="card-wrapper" onclick="flipCard(this)">
-        <div class="angebot-card">
-          <div class="card-front" style="background-image: url('images/web anwe.jpg');">
-            <h3>🧠 Webanwendungen</h3>
-            <p>Intelligente Lösungen für Ihr Business</p>
-          </div>
-          <div class="card-back">
-            <h3>🧠 Webanwendungen</h3>
-            <p>Wir entwickeln maßgeschneiderte Anwendungen, wie Buchungssysteme, Dashboards oder Verwaltungsplattformen – sicher und effizient.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-wrapper" onclick="flipCard(this)">
-        <div class="angebot-card">
-          <div class="card-front" style="background-image: url('images/hosting.png');">
-            <h3>☁️ Hosting & Domains</h3>
-            <p>Sicher, schnell und skalierbar</p>
-          </div>
-          <div class="card-back">
-            <h3>☁️ Hosting & Domains</h3>
-            <p>Wir bieten zuverlässiges Hosting mit SSL-Zertifikaten, schnellen Ladezeiten und persönlichem Support. Domainverwaltung inklusive.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-wrapper" onclick="flipCard(this)">
-        <div class="angebot-card">
-          <div class="card-front" style="background-image: url('images/responsive-website-design.jpg');">
-            <h3>📱 Responsive Design</h3>
-            <p>Optimale Darstellung auf allen Geräten</p>
-          </div>
-          <div class="card-back">
-            <h3>📱 Responsive Design</h3>
-            <p>Ihre Website sieht auf Smartphone, Tablet und Desktop perfekt aus. Wir setzen moderne Frameworks ein, damit alles reibungslos läuft.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-wrapper" onclick="flipCard(this)">
-        <div class="angebot-card">
-          <div class="card-front" style="background-image: url('images/sicherheit.jpg');">
-            <h3>🔒 Sicherheit & Wartung</h3>
-            <p>Regelmäßige Updates und Schutz</p>
-          </div>
-          <div class="card-back">
-            <h3>🔒 Sicherheit & Wartung</h3>
-            <p>Wir halten Ihre Seite sicher und aktuell. Updates, Backups, Monitoring und Schutz vor Angriffen gehören bei uns dazu.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <script>
-    function flipCard(cardWrapper) {
-      cardWrapper.classList.toggle('flipped');
-    }
-  </script>
+    <!-- Karte 2 -->
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="angebot-card">
+        <div class="card-front" style="background-image: url('images/web%20anwe.jpg');">
+          <h3>🧠 Webanwendungen</h3>
+          <p>Individuelle Business-Lösungen</p>
+        </div>
+        <div class="card-back">
+          <h3>🧠 Webanwendungen</h3>
+          <p>Wir entwickeln smarte Tools wie Buchungssysteme, Dashboards & Plattformen – sicher & effizient.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Karte 3 -->
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="angebot-card">
+        <div class="card-front" style="background-image: url('images/hosting.png');">
+          <h3>☁️ Hosting & Domains</h3>
+          <p>Schnell, sicher, skalierbar</p>
+        </div>
+        <div class="card-back">
+          <h3>☁️ Hosting & Domains</h3>
+          <p>Zuverlässiges Hosting mit SSL, Performance & persönlichem Support. Domainverwaltung inklusive.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Karte 4 -->
+    <div class="card-wrapper" onclick="flipCard(this)">
+      <div class="angebot-card">
+        <div class="card-front" style="background-image: url('images/responsive-website-design.jpg');">
+          <h3>📱 Responsive Design</h3>
+          <p>Perfekte Darstellung auf allen Geräten</p>
+        </div>
+        <div class="card-back">
+          <h3>📱 Responsive Design</h3>
+          <p>Optimiert für Smartphone, Tablet & Desktop. Wir setzen moderne Frameworks ein für volle Flexibilität.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  
 
 <!-- Beschreibung Webanwendungen -->
 <div id="webanwendungen" class="description-box">
@@ -327,96 +322,20 @@
   <h3>🔒 Sicherheit & Wartung</h3>
   <p>Wir halten Ihre Seite sicher und aktuell. Updates, Backups, Monitoring und Schutz vor Angriffen gehören bei uns dazu.</p>
 </div>
+
 <script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+
   function flipCard(cardWrapper) {
     cardWrapper.classList.toggle('flipped');
   }
 </script>
 
-<script>
-  // Funktion, um die Beschreibung der Angebote ein- oder auszublenden
-  function toggleDescription(id) {
-    const descriptions = document.querySelectorAll('.description-box');
-    descriptions.forEach(description => {
-      description.style.display = 'none'; // Alle Beschreibungen ausblenden
-    });
-
-    const selectedDescription = document.getElementById(id);
-    if (selectedDescription.style.display === 'none') {
-      selectedDescription.style.display = 'block'; // Beschreibung anzeigen
-    } else {
-      selectedDescription.style.display = 'none'; // Beschreibung ausblenden
-    }
-  }
-</script>
-<style>
-.angebot-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 20px;
-}
-
-.angebot-card {
-  position: relative;
-  border-radius: 16px;
-  width: 23%;
-  height: 300px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-/* Overlay für bessere Lesbarkeit */
-.angebot-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
-  z-index: 1;
-}
-
-card-wrapper {
-
-    }
-
-  .description-box {
-  display: none;
-  background: #f9f9f9;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 90%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  font-family: 'Open Sans', sans-serif;
-}
-
-.description-box h3 {
-  font-size: 20px;
-  color: #333;
-}
-
-.description-box p {
-  font-size: 16px;
-  color: #555;
-  margin-top: 10px;
-}
-
-}
-
-</style>
 <div id="Über Uns" class="section  start-section">
   <h2>Willkommen bei Lahbib Solutions</h2>
   <p>  Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
