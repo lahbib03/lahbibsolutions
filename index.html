@@ -176,32 +176,28 @@
 <div id="angebot" class="section angebot-section">
   <h2>Unsere Angebote</h2>
   <div class="angebot-container">
-    <div class="angebot-card" onclick="toggleDescription('webentwicklung')">
-      <img src="images/weben.png" alt="Webentwicklung">
+    <div class="angebot-card" onclick="toggleDescription('webentwicklung')" style="background-image: url('images/weben.png');">
       <h3>🌐 Webentwicklung</h3>
       <p>Individuelle Websites mit modernem Design</p>
     </div>
-    <div class="angebot-card" onclick="toggleDescription('webanwendungen')">
-      <img src="images/web anwe.jpg" alt="Webanwendungen">
+    <div class="angebot-card" onclick="toggleDescription('webanwendungen')" style="background-image: url('images/web anwe.jpg');">
       <h3>🧠 Webanwendungen</h3>
       <p>Intelligente Lösungen für Ihr Business</p>
     </div>
-    <div class="angebot-card" onclick="toggleDescription('hosting')">
-      <img src="images/hosting.png" alt="Hosting & Domains">
+    <div class="angebot-card" onclick="toggleDescription('hosting')" style="background-image: url('images/hosting.png');">
       <h3>☁️ Hosting & Domains</h3>
       <p>Sicher, schnell und skalierbar</p>
     </div>
-    <div class="angebot-card" onclick="toggleDescription('responsive')">
-      <img src="images/responsive-website-design.jpg" alt="Responsive Design">
+    <div class="angebot-card" onclick="toggleDescription('responsive')" style="background-image: url('images/responsive-website-design.jpg');">
       <h3>📱 Responsive Design</h3>
       <p>Optimale Darstellung auf allen Geräten</p>
     </div>
-    <div class="angebot-card" onclick="toggleDescription('sicherheit')">
-      <img src="images/sicherheit.jpg" alt="Sicherheit & Wartung">
+    <div class="angebot-card" onclick="toggleDescription('sicherheit')" style="background-image: url('images/sicherheit.jpg');">
       <h3>🔒 Sicherheit & Wartung</h3>
       <p>Regelmäßige Updates und Schutz</p>
     </div>
   </div>
+</div>
   
   <div id="webentwicklung" class="description-box" style="display: none;">
     <div class="description-content">
@@ -267,43 +263,40 @@
   }
 
   .angebot-card {
-    background: #f9f9f9;
+    background-size: cover; /* Bildgröße anpassen */
+    background-position: center; /* Bild zentrieren */
     border-radius: 10px;
-    padding: 20px;
-    width: 200px;
+    padding: 40px 20px; /* Mehr Platz für Text */
+    width: 250px;
+    height: 250px;
+    color: white;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Text nach unten verschieben */
     transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .angebot-card h3, .angebot-card p {
+    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund für den Text */
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
   }
 
   .angebot-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 
-  .angebot-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+  .angebot-card h3 {
+    font-size: 18px;
   }
 
-  .description-box {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    padding: 20px;
-    display: none;
-  }
-
-  .description-content h3 {
-    margin-bottom: 10px;
-  }
-
-  .description-content p {
-    font-size: 16px;
-    line-height: 1.5;
+  .angebot-card p {
+    font-size: 14px;
   }
 </style>
 
