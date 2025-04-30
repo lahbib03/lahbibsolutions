@@ -199,40 +199,28 @@
   </div>
 </div>
   
-  <div id="webentwicklung" class="description-box" style="display: none;">
-    <div class="description-content">
-      <h3>Webentwicklung – maßgeschneiderte Websites</h3>
-      <p>Wir erstellen moderne, benutzerfreundliche Websites mit innovativen Technologien und einem Design, das nicht nur optisch überzeugt, sondern auch eine perfekte Benutzererfahrung bietet.</p>
-      <p><strong>Technologien:</strong> HTML5, CSS3, JavaScript, React, Angular.</p>
+  <div id="angebot" class="section angebot-section">
+  <h2>Unsere Angebote</h2>
+  <div class="angebot-container">
+    <div class="angebot-card" onclick="toggleDescription('webentwicklung')" style="background-image: url('images/weben.png');">
+      <h3>🌐 Webentwicklung</h3>
+      <p>Individuelle Websites mit modernem Design</p>
     </div>
-  </div>
-
-  <div id="webanwendungen" class="description-box" style="display: none;">
-    <div class="description-content">
-      <h3>Webanwendungen – intelligente Lösungen für Ihr Business</h3>
-      <p>Unsere Webanwendungen bieten Ihnen skalierbare, benutzerfreundliche Lösungen. Durch die Integration von künstlicher Intelligenz und Chatbots automatisieren wir Prozesse und verbessern die Effizienz Ihres Unternehmens.</p>
-      <p><strong>Technologien:</strong> KI-gestützte Anwendungen, Cloud-Services, Chatbots.</p>
+    <div class="angebot-card" onclick="toggleDescription('webanwendungen')" style="background-image: url('images/web anwe.jpg');">
+      <h3>🧠 Webanwendungen</h3>
+      <p>Intelligente Lösungen für Ihr Business</p>
     </div>
-  </div>
-
-  <div id="hosting" class="description-box" style="display: none;">
-    <div class="description-content">
-      <h3>Hosting & Domains – sicher, schnell und skalierbar</h3>
-      <p>Profitieren Sie von zuverlässigen Hosting-Lösungen, die skalierbar und auf Ihre Bedürfnisse zugeschnitten sind. Mit leistungsstarken Servern sorgen wir für optimale Ladegeschwindigkeiten und Ausfallsicherheit.</p>
+    <div class="angebot-card" onclick="toggleDescription('hosting')" style="background-image: url('images/hosting.png');">
+      <h3>☁️ Hosting & Domains</h3>
+      <p>Sicher, schnell und skalierbar</p>
     </div>
-  </div>
-
-  <div id="responsive" class="description-box" style="display: none;">
-    <div class="description-content">
-      <h3>Responsive Design – optimale Darstellung auf allen Geräten</h3>
-      <p>Ob Desktop, Tablet oder Smartphone – wir sorgen dafür, dass Ihre Website auf allen Geräten hervorragend aussieht und funktioniert. Ihr Design wird immer ansprechend und benutzerfreundlich sein.</p>
+    <div class="angebot-card" onclick="toggleDescription('responsive')" style="background-image: url('images/responsive-website-design.jpg');">
+      <h3>📱 Responsive Design</h3>
+      <p>Optimale Darstellung auf allen Geräten</p>
     </div>
-  </div>
-
-  <div id="sicherheit" class="description-box" style="display: none;">
-    <div class="description-content">
-      <h3>Sicherheit & Wartung – regelmäßige Updates und Schutz</h3>
-      <p>Mit unseren Sicherheitslösungen schützen wir Ihre Website vor Bedrohungen. Wir bieten regelmäßige Wartung und Updates, um Ihre Systeme stets sicher und aktuell zu halten.</p>
+    <div class="angebot-card" onclick="toggleDescription('sicherheit')" style="background-image: url('images/sicherheit.jpg');">
+      <h3>🔒 Sicherheit & Wartung</h3>
+      <p>Regelmäßige Updates und Schutz</p>
     </div>
   </div>
 </div>
@@ -257,21 +245,22 @@
 <style>
   .angebot-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Verteilung über das ganze Fenster */
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px; /* Abstand zwischen den Karten */
+    padding: 20px; /* Abstand zum Rand */
   }
 
   .angebot-card {
     background-size: cover; /* Bildgröße anpassen */
     background-position: center; /* Bild zentrieren */
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 40px 20px; /* Mehr Platz für Text */
-    width: 250px;
-    height: 250px;
+    width: 23%; /* Breite auf 23% setzen, um 4 Karten nebeneinander zu platzieren */
+    height: 300px; /* Höhe der Karten erhöhen */
     color: white;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -286,17 +275,26 @@
     border-radius: 5px;
   }
 
-  .angebot-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-
   .angebot-card h3 {
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px; /* Größere Schrift für die Überschrift */
+    font-weight: bold;
   }
 
   .angebot-card p {
-    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Größere Schrift für den Text */
+    font-style: italic;
+  }
+
+  .angebot-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Sicherstellen, dass die Schrift gut lesbar ist */
+  .angebot-card h3, .angebot-card p {
+    color: white;
   }
 </style>
 
