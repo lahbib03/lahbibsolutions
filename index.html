@@ -175,62 +175,83 @@
   </p>
 </div>
 
-<div id="angebot" class="section angebot-section">
-  <h2>Unsere Angebote</h2>
-  <div class="angebot-container">
-    <div class="angebot-card" onclick="toggleDescription('webentwicklung')" style="background-image: url('images/weben.png');">
-      <h3>🌐 Webentwicklung</h3>
-      <p>Individuelle Websites mit modernem Design</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('webanwendungen')" style="background-image: url('images/web anwe.jpg');">
-      <h3>🧠 Webanwendungen</h3>
-      <p>Intelligente Lösungen für Ihr Business</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('hosting')" style="background-image: url('images/hosting.png');">
-      <h3>☁️ Hosting & Domains</h3>
-      <p>Sicher, schnell und skalierbar</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('responsive')" style="background-image: url('images/responsive-website-design.jpg');">
-      <h3>📱 Responsive Design</h3>
-      <p>Optimale Darstellung auf allen Geräten</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('sicherheit')" style="background-image: url('images/sicherheit.jpg');">
-      <h3>🔒 Sicherheit & Wartung</h3>
-      <p>Regelmäßige Updates und Schutz</p>
-    </div>
-  </div>
-</div>
-  
   <div id="angebot" class="section angebot-section">
-  <h2>Unsere Angebote</h2>
-  <div class="angebot-container">
-    <div class="angebot-card" onclick="toggleDescription('webentwicklung')" style="background-image: url('images/weben.png');">
-      <h3>🌐 Webentwicklung</h3>
-      <p>Individuelle Websites mit modernem Design</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('webanwendungen')" style="background-image: url('images/web anwe.jpg');">
-      <h3>🧠 Webanwendungen</h3>
-      <p>Intelligente Lösungen für Ihr Business</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('hosting')" style="background-image: url('images/hosting.png');">
-      <h3>☁️ Hosting & Domains</h3>
-      <p>Sicher, schnell und skalierbar</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('responsive')" style="background-image: url('images/responsive-website-design.jpg');">
-      <h3>📱 Responsive Design</h3>
-      <p>Optimale Darstellung auf allen Geräten</p>
-    </div>
-    <div class="angebot-card" onclick="toggleDescription('sicherheit')" style="background-image: url('images/sicherheit.jpg');">
-      <h3>🔒 Sicherheit & Wartung</h3>
-      <p>Regelmäßige Updates und Schutz</p>
+    <h2>Unsere Angebote</h2>
+    <div class="angebot-container">
+
+      <div class="card-wrapper" onclick="flipCard(this)">
+        <div class="angebot-card">
+          <div class="card-front" style="background-image: url('images/weben.png');">
+            <h3>🌐 Webentwicklung</h3>
+            <p>Individuelle Websites mit modernem Design</p>
+          </div>
+          <div class="card-back">
+            <h3>🌐 Webentwicklung</h3>
+            <p>Wir gestalten individuelle, moderne und benutzerfreundliche Websites – abgestimmt auf Ihre Bedürfnisse. Vom Onepager bis zum komplexen Webportal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-wrapper" onclick="flipCard(this)">
+        <div class="angebot-card">
+          <div class="card-front" style="background-image: url('images/web anwe.jpg');">
+            <h3>🧠 Webanwendungen</h3>
+            <p>Intelligente Lösungen für Ihr Business</p>
+          </div>
+          <div class="card-back">
+            <h3>🧠 Webanwendungen</h3>
+            <p>Wir entwickeln maßgeschneiderte Anwendungen, wie Buchungssysteme, Dashboards oder Verwaltungsplattformen – sicher und effizient.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-wrapper" onclick="flipCard(this)">
+        <div class="angebot-card">
+          <div class="card-front" style="background-image: url('images/hosting.png');">
+            <h3>☁️ Hosting & Domains</h3>
+            <p>Sicher, schnell und skalierbar</p>
+          </div>
+          <div class="card-back">
+            <h3>☁️ Hosting & Domains</h3>
+            <p>Wir bieten zuverlässiges Hosting mit SSL-Zertifikaten, schnellen Ladezeiten und persönlichem Support. Domainverwaltung inklusive.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-wrapper" onclick="flipCard(this)">
+        <div class="angebot-card">
+          <div class="card-front" style="background-image: url('images/responsive-website-design.jpg');">
+            <h3>📱 Responsive Design</h3>
+            <p>Optimale Darstellung auf allen Geräten</p>
+          </div>
+          <div class="card-back">
+            <h3>📱 Responsive Design</h3>
+            <p>Ihre Website sieht auf Smartphone, Tablet und Desktop perfekt aus. Wir setzen moderne Frameworks ein, damit alles reibungslos läuft.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-wrapper" onclick="flipCard(this)">
+        <div class="angebot-card">
+          <div class="card-front" style="background-image: url('images/sicherheit.jpg');">
+            <h3>🔒 Sicherheit & Wartung</h3>
+            <p>Regelmäßige Updates und Schutz</p>
+          </div>
+          <div class="card-back">
+            <h3>🔒 Sicherheit & Wartung</h3>
+            <p>Wir halten Ihre Seite sicher und aktuell. Updates, Backups, Monitoring und Schutz vor Angriffen gehören bei uns dazu.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-<!-- Beschreibung Webentwicklung -->
-<div id="webentwicklung" class="description-box">
-  <h3>🌐 Webentwicklung</h3>
-  <p>Wir gestalten individuelle, moderne und benutzerfreundliche Websites – abgestimmt auf Ihre Bedürfnisse. Vom Onepager bis zum komplexen Webportal.</p>
-</div>
+
+  <script>
+    function flipCard(cardWrapper) {
+      cardWrapper.classList.toggle('flipped');
+    }
+  </script>
 
 <!-- Beschreibung Webanwendungen -->
 <div id="webanwendungen" class="description-box">
@@ -311,43 +332,89 @@
   z-index: 1;
 }
 
-.angebot-card h3,
-.angebot-card p {
-  position: relative;
-  z-index: 2;
-  padding: 8px 12px;
-  margin: 0 0 5px 0;
-  color: white;
-}
+card-wrapper {
+      perspective: 1000px;
+      width: 250px;
+      height: 320px;
+    }
 
-.angebot-card h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-}
+    .angebot-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
 
-.angebot-card p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  font-style: italic;
-}
+    .card-wrapper.flipped .angebot-card {
+      transform: rotateY(180deg);
+    }
 
-.angebot-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-}
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      backface-visibility: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 20px;
+    }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .angebot-card {
-    width: 48%;
-  }
-}
+    .card-front {
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
 
-@media (max-width: 600px) {
-  .angebot-card {
-    width: 100%;
-  }
+    .card-front::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+      z-index: 1;
+    }
+
+    .card-front h3,
+    .card-front p {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .card-front h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-back {
+      background: white;
+      color: #333;
+      transform: rotateY(180deg);
+      text-align: left;
+      padding: 20px;
+    }
+
+    .card-back h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .card-back p {
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .card-wrapper {
+        width: 90%;
+        height: 300px;
+      }
+    }
 
   .description-box {
   display: none;
