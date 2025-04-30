@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lahbib Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -24,21 +23,21 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.8em;
-      animation: fadeInDown 1s ease;
+      font-size: 2.5em;
     }
 
     header p {
       font-size: 1.2em;
-      animation: fadeInUp 1s ease;
+      margin-top: 10px;
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background: #1976d2;
-      padding: 10px;
-      gap: 30px;
+      padding: 12px;
+      gap: 20px;
     }
 
     nav a {
@@ -46,7 +45,6 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
-      cursor: pointer;
     }
 
     nav a:hover {
@@ -56,9 +54,8 @@
     .section {
       display: none;
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      animation: fadeIn 0.5s ease forwards;
     }
 
     .active {
@@ -69,100 +66,37 @@
       background: white;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      padding: 50px;
+      padding: 50px 30px;
       text-align: center;
     }
 
     .start-section h2 {
-      font-size: 2.2em;
+      font-size: 2em;
       color: #0d47a1;
-      margin-bottom: 20px;
     }
 
     .start-section p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       line-height: 1.7;
+      color: #444;
     }
 
-    .angebot-section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .angebot-section li::before {
-      content: "💡";
-      margin-right: 10px;
-    }
-
-    form {
+    .angebot-container {
       display: flex;
-      flex-direction: column;
-      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
     }
 
-    input, textarea {
-      padding: 10px;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    .card-wrapper {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 320px;
+      height: 400px;
+      transition: transform 0.3s ease;
+      position: relative;
     }
-
-    button {
-      padding: 10px;
-      background-color: #0d47a1;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #1565c0;
-    }
-
-    footer {
-      background-color: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-.angebot-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 70px 30px; /* horizontaler & vertikaler Abstand */
-}
-.card-wrapper {
-  perspective: 1000px;
-  width: 350px;
-  height: 450px; /* Höhe hinzugefügt */
-  transition: transform 0.3s ease;
-  position: relative;
-}
-  .card-wrapper:nth-child(odd) {
-  transform: translateY(20px);
-}
-.card-wrapper:nth-child(even) {
-  transform: translateY(0);
-}
 
     .angebot-card {
       width: 100%;
@@ -208,7 +142,47 @@
       margin-bottom: 10px;
     }
 
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
 
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .start-section {
+        padding: 30px 20px;
+      }
+
+      .angebot-container {
+        gap: 20px;
+      }
+
+      .card-wrapper {
+        max-width: 90%;
+        height: 380px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -216,36 +190,29 @@
 <header>
   <h1>Lahbib Solutions</h1>
   <p>Innovative Weblösungen für Ihr digitales Wachstum</p>
-  <div class="logo" style="display: flex; align-items: center;">
-    <img src="images/logo.png" alt="Lahbib Solution Logo" style="height: 120px; width: auto;">
-  </div>
 </header>
 
 <nav>
   <a onclick="showSection('start')">Startseite</a>
   <a onclick="showSection('angebot')">Angebot</a>
   <a onclick="showSection('kontakt')">Kontakt</a>
-  <a onclick="showSection('Über Uns')">Über Uns</a>
+  <a onclick="showSection('ueber')">Über Uns</a>
 </nav>
 
-<div id="start" class="section active start-section" style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 900px; margin: 40px auto; animation: fadeIn 1.2s ease forwards;">
-  <h2 style="font-size: 2.8em; color: #0d47a1; margin-bottom: 20px; font-family: 'Georgia', serif;">Willkommen bei <span style="color: #1976d2;">Lahbib Solutions</span></h2>
-  <p style="font-size: 1.3em; line-height: 1.8; color: #444; margin-bottom: 30px;">
+<div id="start" class="section active start-section">
+  <h2>Willkommen bei <span style="color: #1976d2;">Lahbib Solutions</span></h2>
+  <p>
     Ihre Vision ist unser Projekt – wir gestalten digitale Lösungen mit Leidenschaft und Präzision.
   </p>
-  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
-    Egal ob Sie eine <strong>maßgeschneiderte Website</strong>, eine <strong>skalierbare Webanwendung</strong> oder ein <strong>sicheres Hosting</strong> benötigen – bei uns bekommen Sie alles aus einer Hand. Mit modernsten Technologien und einem kreativen Team setzen wir Ihre Ideen um und begleiten Sie von der Planung bis zur Umsetzung.
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
-    Vertrauen Sie auf <strong>Kompetenz, Kreativität und Kundenorientierung</strong>. Starten Sie mit uns in die digitale Zukunft!
+  <p>
+    Egal ob Sie eine <strong>maßgeschneiderte Website</strong>, eine <strong>skalierbare Webanwendung</strong> oder ein <strong>sicheres Hosting</strong> benötigen – bei uns bekommen Sie alles aus einer Hand.
   </p>
 </div>
 
- <div id="angebot" class="section Angebot ">
+<div id="angebot" class="section">
   <h2 style="text-align:center; color:#0d47a1;">Unsere Angebote</h2>
   <div class="angebot-container">
 
-    <!-- Karte 1 -->
     <div class="card-wrapper" onclick="flipCard(this)">
       <div class="angebot-card">
         <div class="card-front" style="background-image: url('images/weben.png');">
@@ -254,12 +221,11 @@
         </div>
         <div class="card-back">
           <h3>🌐 Webentwicklung</h3>
-          <p>Wir gestalten moderne, benutzerfreundliche Websites – vom Onepager bis zum komplexen Webportal.</p>
+          <p>Benutzerfreundliche Websites – vom Onepager bis zum Webportal.</p>
         </div>
       </div>
     </div>
 
-    <!-- Karte 2 -->
     <div class="card-wrapper" onclick="flipCard(this)">
       <div class="angebot-card">
         <div class="card-front" style="background-image: url('images/web%20anwe.jpg');">
@@ -268,12 +234,11 @@
         </div>
         <div class="card-back">
           <h3>🧠 Webanwendungen</h3>
-          <p>Wir entwickeln smarte Tools wie Buchungssysteme, Dashboards & Plattformen – sicher & effizient.</p>
+          <p>Tools wie Buchungssysteme, Dashboards & Plattformen – sicher & effizient.</p>
         </div>
       </div>
     </div>
 
-    <!-- Karte 3 -->
     <div class="card-wrapper" onclick="flipCard(this)">
       <div class="angebot-card">
         <div class="card-front" style="background-image: url('images/hosting.png');">
@@ -282,21 +247,7 @@
         </div>
         <div class="card-back">
           <h3>☁️ Hosting & Domains</h3>
-          <p>Zuverlässiges Hosting mit SSL, Performance & persönlichem Support. Domainverwaltung inklusive.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Karte 4 -->
-    <div class="card-wrapper" onclick="flipCard(this)">
-      <div class="angebot-card">
-        <div class="card-front" style="background-image: url('images/responsive-website-design.jpg');">
-          <h3>📱 Responsive Design</h3>
-          <p>Perfekte Darstellung auf allen Geräten</p>
-        </div>
-        <div class="card-back">
-          <h3>📱 Responsive Design</h3>
-          <p>Optimiert für Smartphone, Tablet & Desktop. Wir setzen moderne Frameworks ein für volle Flexibilität.</p>
+          <p>SSL, Performance, Support & Domainverwaltung.</p>
         </div>
       </div>
     </div>
@@ -304,9 +255,9 @@
   </div>
 </div>
 
-  
-
-
+<footer>
+  &copy; 2025 Lahbib Solutions. Alle Rechte vorbehalten.
+</footer>
 
 <script>
   function showSection(id) {
@@ -316,55 +267,10 @@
     document.getElementById(id).classList.add('active');
   }
 
-  function flipCard(cardWrapper) {
-    cardWrapper.classList.toggle('flipped');
+  function flipCard(element) {
+    element.classList.toggle('flipped');
   }
 </script>
 
-<div id="Über Uns" class="section  start-section">
-  <h2>Willkommen bei Lahbib Solutions</h2>
-  <p>  Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
-    Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen –
-    von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.</p>
-  
-</div>
-<div id="kontakt" class="section kontakt-section">
-  <h2>Kontaktformular</h2>
-  <form onsubmit="event.preventDefault(); alert('Vielen Dank! Wir melden uns bald.'); this.reset();">
-    <input type="text" name="name" placeholder="Ihr Name" required />
-    <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required />
-    <textarea name="message" rows="5" placeholder="Ihre Nachricht..." required></textarea>
-    <button type="submit">Absenden</button>
-  </form>
-</div>
-<div id="it-support" class="section active it-support-section" style="text-align: center; padding: 60px 20px; background: #f5f7fa; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); max-width: 900px; margin: 60px auto; animation: fadeIn 1.2s ease forwards;">
-  <h2 style="font-size: 2.5em; color: #0d47a1; margin-bottom: 20px; font-family: 'Georgia', serif;">IT-SUPPORT</h2>
-  <p style="font-size: 1.4em; color: #1976d2; font-weight: bold; margin-bottom: 20px;">
-    Einfach rundum mehr Sorgenfreiheit für Ihre IT
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.8; color: #444;">
-    Verlassen Sie sich auf unseren schnellen, kompetenten und persönlichen IT-Support. Ob PC-Probleme, Netzwerkeinrichtung oder Softwarelösungen – wir stehen Ihnen zur Seite und sorgen dafür, dass Ihre Systeme reibungslos funktionieren.
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.8; color: #444;">
-    Unser Ziel: <strong>Minimale Ausfallzeiten, maximale Sicherheit</strong> – damit Sie sich ganz auf Ihr Geschäft konzentrieren können.
-  </p>
-</div>
-
-<footer>
-  &copy; 2025 Lahbib Solutions – Alle Rechte vorbehalten.
-</footer>
-
-<script>
-  function showSection(id) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-  }
-</script>
-
-</body>
-</html>
 </body>
 </html>
