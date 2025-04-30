@@ -18,6 +18,11 @@
       color: white;
       padding: 30px 20px;
       text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
     }
 
     header h1 {
@@ -37,6 +42,9 @@
       background: #1976d2;
       padding: 10px;
       gap: 30px;
+      position: sticky;
+      top: 100px;
+      transition: background-color 0.3s ease;
     }
 
     nav a {
@@ -45,10 +53,14 @@
       font-weight: bold;
       font-size: 1.1em;
       cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     nav a:hover {
       color: #ffeb3b;
+      opacity: 1;
+      transform: scale(1.1);
     }
 
     .section {
@@ -56,7 +68,7 @@
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
-      animation: fadeIn 0.5s ease forwards;
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .active {
@@ -69,6 +81,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       padding: 50px;
       text-align: center;
+      animation: fadeInLeft 1s ease;
     }
 
     .start-section h2 {
@@ -113,6 +126,7 @@
       border-radius: 8px;
       font-size: 1em;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -132,6 +146,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -140,6 +159,42 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    .it-support-section h2, .angebot-section h2 {
+      font-size: 2.5em;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    .it-support-section p, .angebot-section p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .it-support-section {
+      background: #f5f7fa;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: 60px auto;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .angebot-section {
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      margin: 60px auto;
+      max-width: 900px;
+      animation: fadeInRight 1.2s ease forwards;
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
     }
   </style>
 </head>
@@ -160,17 +215,10 @@
   <a onclick="showSection('Über Uns')">Über Uns</a>
 </nav>
 
-<div id="start" class="section active start-section" style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 900px; margin: 40px auto; animation: fadeIn 1.2s ease forwards;">
-  <h2 style="font-size: 2.8em; color: #0d47a1; margin-bottom: 20px; font-family: 'Georgia', serif;">Willkommen bei <span style="color: #1976d2;">Lahbib Solutions</span></h2>
-  <p style="font-size: 1.3em; line-height: 1.8; color: #444; margin-bottom: 30px;">
-    Ihre Vision ist unser Projekt – wir gestalten digitale Lösungen mit Leidenschaft und Präzision.
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
-    Egal ob Sie eine <strong>maßgeschneiderte Website</strong>, eine <strong>skalierbare Webanwendung</strong> oder ein <strong>sicheres Hosting</strong> benötigen – bei uns bekommen Sie alles aus einer Hand. Mit modernsten Technologien und einem kreativen Team setzen wir Ihre Ideen um und begleiten Sie von der Planung bis zur Umsetzung.
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.7; color: #555;">
-    Vertrauen Sie auf <strong>Kompetenz, Kreativität und Kundenorientierung</strong>. Starten Sie mit uns in die digitale Zukunft!
-  </p>
+<div id="start" class="section active start-section">
+  <h2>Willkommen bei <span style="color: #1976d2;">Lahbib Solutions</span></h2>
+  <p>Ihre Vision ist unser Projekt – wir gestalten digitale Lösungen mit Leidenschaft und Präzision.</p>
+  <p>Vertrauen Sie auf Kompetenz, Kreativität und Kundenorientierung. Starten Sie mit uns in die digitale Zukunft!</p>
 </div>
 
 <div id="angebot" class="section angebot-section">
@@ -183,13 +231,12 @@
     <li>🔒 Sicherheit & Wartung – regelmäßige Updates und Schutz</li>
   </ul>
 </div>
-<div id="Über Uns" class="section  start-section">
-  <h2>Willkommen bei Lahbib Solutions</h2>
-  <p>  Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
-    Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen –
-    von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.</p>
-  
+
+<div id="Über Uns" class="section start-section">
+  <h2>Über uns</h2>
+  <p>Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden. Seit unserer Gründung entwickeln wir maßgeschneiderte digitale Lösungen für Unternehmen aller Branchen – von kleinen Start-ups bis hin zu etablierten Mittelstandsunternehmen.</p>
 </div>
+
 <div id="kontakt" class="section kontakt-section">
   <h2>Kontaktformular</h2>
   <form onsubmit="event.preventDefault(); alert('Vielen Dank! Wir melden uns bald.'); this.reset();">
@@ -199,17 +246,11 @@
     <button type="submit">Absenden</button>
   </form>
 </div>
-<div id="it-support" class="section active it-support-section" style="text-align: center; padding: 60px 20px; background: #f5f7fa; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); max-width: 900px; margin: 60px auto; animation: fadeIn 1.2s ease forwards;">
-  <h2 style="font-size: 2.5em; color: #0d47a1; margin-bottom: 20px; font-family: 'Georgia', serif;">IT-SUPPORT</h2>
-  <p style="font-size: 1.4em; color: #1976d2; font-weight: bold; margin-bottom: 20px;">
-    Einfach rundum mehr Sorgenfreiheit für Ihre IT
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.8; color: #444;">
-    Verlassen Sie sich auf unseren schnellen, kompetenten und persönlichen IT-Support. Ob PC-Probleme, Netzwerkeinrichtung oder Softwarelösungen – wir stehen Ihnen zur Seite und sorgen dafür, dass Ihre Systeme reibungslos funktionieren.
-  </p>
-  <p style="font-size: 1.1em; line-height: 1.8; color: #444;">
-    Unser Ziel: <strong>Minimale Ausfallzeiten, maximale Sicherheit</strong> – damit Sie sich ganz auf Ihr Geschäft konzentrieren können.
-  </p>
+
+<div id="it-support" class="section it-support-section">
+  <h2>IT-SUPPORT</h2>
+  <p>Einfach rundum mehr Sorgenfreiheit für Ihre IT</p>
+  <p>Verlassen Sie sich auf unseren schnellen, kompetenten und persönlichen IT-Support. Ob PC-Probleme, Netzwerkeinrichtung oder Softwarelösungen – wir stehen Ihnen zur Seite und sorgen dafür, dass Ihre Systeme reibungslos funktionieren.</p>
 </div>
 
 <footer>
