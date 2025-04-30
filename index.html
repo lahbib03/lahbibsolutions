@@ -175,53 +175,69 @@
 
 <div id="angebot" class="section angebot-section">
   <h2>Unsere Angebote</h2>
-  <ul>
-    <li onclick="toggleDescription('webentwicklung')">🌐 Webentwicklung – individuelle Websites mit modernem Design</li>
-    <li onclick="toggleDescription('webanwendungen')">🧠 Webanwendungen – intelligente Lösungen für Ihr Business</li>
-    <li onclick="toggleDescription('hosting')">☁️ Hosting & Domains – sicher, schnell und skalierbar</li>
-    <li onclick="toggleDescription('responsive')">📱 Responsive Design – optimale Darstellung auf allen Geräten</li>
-    <li onclick="toggleDescription('sicherheit')">🔒 Sicherheit & Wartung – regelmäßige Updates und Schutz</li>
-  </ul>
+  <div class="angebot-container">
+    <div class="angebot-card" onclick="toggleDescription('webentwicklung')">
+      <img src="webentwicklung-icon.png" alt="Webentwicklung">
+      <h3>🌐 Webentwicklung</h3>
+      <p>Individuelle Websites mit modernem Design</p>
+    </div>
+    <div class="angebot-card" onclick="toggleDescription('webanwendungen')">
+      <img src="webanwendungen-icon.png" alt="Webanwendungen">
+      <h3>🧠 Webanwendungen</h3>
+      <p>Intelligente Lösungen für Ihr Business</p>
+    </div>
+    <div class="angebot-card" onclick="toggleDescription('hosting')">
+      <img src="hosting-icon.png" alt="Hosting & Domains">
+      <h3>☁️ Hosting & Domains</h3>
+      <p>Sicher, schnell und skalierbar</p>
+    </div>
+    <div class="angebot-card" onclick="toggleDescription('responsive')">
+      <img src="responsive-icon.png" alt="Responsive Design">
+      <h3>📱 Responsive Design</h3>
+      <p>Optimale Darstellung auf allen Geräten</p>
+    </div>
+    <div class="angebot-card" onclick="toggleDescription('sicherheit')">
+      <img src="sicherheit-icon.png" alt="Sicherheit & Wartung">
+      <h3>🔒 Sicherheit & Wartung</h3>
+      <p>Regelmäßige Updates und Schutz</p>
+    </div>
+  </div>
   
   <div id="webentwicklung" class="description-box" style="display: none;">
-    <h3>Webentwicklung – maßgeschneiderte Websites</h3>
-    <p>
-      Wir erstellen moderne, benutzerfreundliche Websites, die auf Ihre individuellen Bedürfnisse und Ziele zugeschnitten sind. Durch den Einsatz von innovativen Technologien bieten wir Ihnen ein Design, das nicht nur optisch überzeugt, sondern auch optimal funktioniert. 
-    </p>
-    <p>
-      <strong>Besondere Technologien:</strong> HTML5, CSS3, JavaScript, React, Angular und vieles mehr.
-    </p>
+    <div class="description-content">
+      <h3>Webentwicklung – maßgeschneiderte Websites</h3>
+      <p>Wir erstellen moderne, benutzerfreundliche Websites mit innovativen Technologien und einem Design, das nicht nur optisch überzeugt, sondern auch eine perfekte Benutzererfahrung bietet.</p>
+      <p><strong>Technologien:</strong> HTML5, CSS3, JavaScript, React, Angular.</p>
+    </div>
   </div>
 
   <div id="webanwendungen" class="description-box" style="display: none;">
-    <h3>Webanwendungen – intelligente Lösungen für Ihr Business</h3>
-    <p>
-      Unsere Webanwendungen bieten Ihnen flexible und skalierbare Lösungen für Ihre Unternehmensbedürfnisse. Sie basieren auf neuesten Technologien, um eine effiziente und benutzerfreundliche Interaktion zu gewährleisten.
-    </p>
-    <p>
-      <strong>KI und Chatbots:</strong> Wir integrieren künstliche Intelligenz und Chatbots in Ihre Webanwendungen, um den Kundenservice zu optimieren und Arbeitsprozesse zu automatisieren.
-    </p>
+    <div class="description-content">
+      <h3>Webanwendungen – intelligente Lösungen für Ihr Business</h3>
+      <p>Unsere Webanwendungen bieten Ihnen skalierbare, benutzerfreundliche Lösungen. Durch die Integration von künstlicher Intelligenz und Chatbots automatisieren wir Prozesse und verbessern die Effizienz Ihres Unternehmens.</p>
+      <p><strong>Technologien:</strong> KI-gestützte Anwendungen, Cloud-Services, Chatbots.</p>
+    </div>
   </div>
 
   <div id="hosting" class="description-box" style="display: none;">
-    <h3>Hosting & Domains – sicher, schnell und skalierbar</h3>
-    <p>
-      Wir bieten Ihnen zuverlässige und schnelle Hosting-Lösungen, die ideal auf Ihre Website oder Anwendung abgestimmt sind. Unsere Server sind sicher, skalierbar und bieten hervorragende Performance.
-    </p>
+    <div class="description-content">
+      <h3>Hosting & Domains – sicher, schnell und skalierbar</h3>
+      <p>Profitieren Sie von zuverlässigen Hosting-Lösungen, die skalierbar und auf Ihre Bedürfnisse zugeschnitten sind. Mit leistungsstarken Servern sorgen wir für optimale Ladegeschwindigkeiten und Ausfallsicherheit.</p>
+    </div>
   </div>
 
   <div id="responsive" class="description-box" style="display: none;">
-    <h3>Responsive Design – optimale Darstellung auf allen Geräten</h3>
-    <p>
-      Ihre Website wird auf allen Geräten perfekt dargestellt. Vom Desktop über das Tablet bis zum Smartphone – wir sorgen dafür, dass Ihre Inhalte überall gut aussehen und funktional sind.
-    </p>
+    <div class="description-content">
+      <h3>Responsive Design – optimale Darstellung auf allen Geräten</h3>
+      <p>Ob Desktop, Tablet oder Smartphone – wir sorgen dafür, dass Ihre Website auf allen Geräten hervorragend aussieht und funktioniert. Ihr Design wird immer ansprechend und benutzerfreundlich sein.</p>
+    </div>
   </div>
 
   <div id="sicherheit" class="description-box" style="display: none;">
-    <h3>Sicherheit & Wartung – regelmäßige Updates und Schutz</h3>
-    <p>
-      Wir garantieren regelmäßige Sicherheitsupdates und Schutzmaßnahmen für Ihre Website. Unsere Wartungsservices sorgen dafür, dass Ihre Online-Präsenz stets auf dem neuesten Stand ist und zuverlässig funktioniert.
-    </p>
+    <div class="description-content">
+      <h3>Sicherheit & Wartung – regelmäßige Updates und Schutz</h3>
+      <p>Mit unseren Sicherheitslösungen schützen wir Ihre Website vor Bedrohungen. Wir bieten regelmäßige Wartung und Updates, um Ihre Systeme stets sicher und aktuell zu halten.</p>
+    </div>
   </div>
 </div>
 
@@ -241,6 +257,56 @@
     }
   }
 </script>
+
+<style>
+  .angebot-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .angebot-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .angebot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .angebot-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .description-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    display: none;
+  }
+
+  .description-content h3 {
+    margin-bottom: 10px;
+  }
+
+  .description-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+</style>
+
 <div id="Über Uns" class="section  start-section">
   <h2>Willkommen bei Lahbib Solutions</h2>
   <p>  Lahbib Solutions ist aus der Leidenschaft für Technologie, Design und Benutzerfreundlichkeit entstanden.
