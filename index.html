@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lahbib Solutions</title>
@@ -242,61 +244,83 @@
   }
 </script>
 
-<style>
-  .angebot-container {
-    display: flex;
-    justify-content: space-between; /* Verteilung über das ganze Fenster */
-    flex-wrap: wrap;
-    gap: 30px; /* Abstand zwischen den Karten */
-    padding: 20px; /* Abstand zum Rand */
-  }
+.angebot-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
 
+.angebot-card {
+  position: relative;
+  border-radius: 16px;
+  width: 23%;
+  height: 300px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Overlay für bessere Lesbarkeit */
+.angebot-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+.angebot-card h3,
+.angebot-card p {
+  position: relative;
+  z-index: 2;
+  padding: 8px 12px;
+  margin: 0 0 5px 0;
+  color: white;
+}
+
+.angebot-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.angebot-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.angebot-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .angebot-card {
-    background-size: cover; /* Bildgröße anpassen */
-    background-position: center; /* Bild zentrieren */
-    border-radius: 12px;
-    padding: 40px 20px; /* Mehr Platz für Text */
-    width: 23%; /* Breite auf 23% setzen, um 4 Karten nebeneinander zu platzieren */
-    height: 300px; /* Höhe der Karten erhöhen */
-    color: white;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Text nach unten verschieben */
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 48%;
   }
+}
 
-  .angebot-card h3, .angebot-card p {
-   
-    padding: 10px;
-    margin: 0;
-    border-radius: 5px;
+@media (max-width: 600px) {
+  .angebot-card {
+    width: 100%;
   }
+}
 
-  .angebot-card h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px; /* Größere Schrift für die Überschrift */
-    font-weight: bold;
-  }
-
-  .angebot-card p {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px; /* Größere Schrift für den Text */
-    font-style: italic;
-  }
-
-  .angebot-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  }
-
-  /* Sicherstellen, dass die Schrift gut lesbar ist */
-  .angebot-card h3, .angebot-card p {
-    color: white;
-  }
-</style>
 
 <div id="Über Uns" class="section  start-section">
   <h2>Willkommen bei Lahbib Solutions</h2>
